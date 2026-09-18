@@ -1,0 +1,27 @@
+{
+  "name": "nexus-biddings-engine",
+  "version": "1.0.0",
+  "description": "High-Throughput Transactional Auction System with Atomic Bid Serialization and Real-Time WebSocket Streaming",
+  "main": "src/server/server.js",
+  "scripts": {
+    "start": "node src/server/server.js",
+    "test": "node --test tests/engine.test.js",
+    "stress": "node scripts/stress_test.js --requests 5000 --concurrency 50",
+    "stress:wire": "node scripts/stress_test.js --requests 5000 --concurrency 50 --wire",
+    "verify": "node scripts/verify_audit.js"
+  },
+  "keywords": [
+    "auction-engine",
+    "distributed-systems",
+    "atomic-serialization",
+    "high-throughput",
+    "sqlite-wal",
+    "websocket"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "ws": "^8.21.3"
+  }
+}
